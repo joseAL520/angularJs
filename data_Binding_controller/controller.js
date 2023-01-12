@@ -12,7 +12,7 @@ angular.module("MyFistApp", [])
 
     // funciones
     $scope.agregarComentario = function(){
-      $scope.comentarios.push($scope.nuevoUsuario);   
+      $scope.usuarios.push($scope.nuevoUsuario);   
       $scope.nuevoComenatio={};
     }
 });

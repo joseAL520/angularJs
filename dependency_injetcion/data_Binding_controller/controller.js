@@ -1,19 +1,21 @@
+// dependecy injection - las dependecias que generas o que existen puedo incrustarlo con mis controladores o dentro del modulo
 
 angular.module("MyFistApp", [])
-.controller("FirstController", function($scope){ 
+//  se hace atraves de las variables  en este casos $   se debe respetar el orden
+  .controller("FirstController",["$scope","$http" ,function(mv , url){ 
     
-    $scope.nombre = "jose";
-    $scope.nuevoUsuario = {};
-    $scope.usuarios=[
+    mv.nombre = "jose";
+    mv.nuevoUsuario = {};
+    mv.usuarios=[
         {comentario: "buen comentario", username:"joseAngel"},
         {comentario: "mal comentario",  username:"otro usuario"}
     ];
 
 
     // funciones
-    $scope.agregarComentario = function(){
-      $scope.comentarios.push($scope.nuevoUsuario);   
-      $scope.nuevoComenatio={};
+    mv.agregarComentario = function(){
+      mv.comentarios.push($scope.nuevoUsuario);   
+      mv.nuevoComenatio={};
     }
-});
+}]);
 
