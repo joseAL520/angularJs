@@ -10,9 +10,18 @@
 </head>
 <!--enlacamos nuestro controlador con ng.controller-->
 <body ng-controller="FirstController">
+ 
+<input type="text" ng-model="nuevoUsuario.comentario" > <br>
+<input type="text" ng-model="nuevoUsuario.username" > <br>
+ 
+<button ng-click="agregarComentario()">agregar</button>
 
- {{"hola " + nombre }}
-
+<h3>Usuarios</h3>
+    <ul>
+        <li ng-repeat="user in usuarios">
+            {{user.comentario}} - <strong>{{user.username}}</strong>
+        </li>
+    </ul>
  
 </body>
 </html>
