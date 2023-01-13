@@ -7,7 +7,16 @@
     <script src="angular-local-storage.js"></script>
     <title>factoris</title>
 </head>
+
 <body ng-controller="ToDoController">
+
+    <form ng-submit="addActv()">
+        <input type="text" ng-model="newActv.descripcion">
+        <input type="datetime-local" ng-model="newActv.fecha" >
+        <button ng-click="addActv">agregar a la lista</button>
+    </form>
+
+    <h1>listaa</h1>
     <ul>
         <li ng-repeat="acti in todo">
             {{acti.descripcion}} -
@@ -15,10 +24,6 @@
         </li>
     </ul>
 
-    <form ng-submit="addActv()">
-        <input type="text" ng-model="newActv.descripcion">
-        <input type="datetime-local" ng-model="newActv.fecha" >
-        <button ng-click="addActv">agregar a la lista</button>
-    </form>
+   
 </body>
 </html>
