@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="toDoList">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="cotroller.js"></script>
+    <script src="angular-local-storage.min.js"></script>
+    <title>todo list</title>
+</head>
+<body ng-controller="TodoController">
+
+    <form ng-submit="addActv()">
+        <input type="text" ng-model="newActv.descripcion">
+        <input type="datetime-local" ng-model="newActv.fecha" >
+        <input type="submit" value="guardar actividad">
+    </form>
+
+
+    <h1>Lista de cosas por hacer</h1>
+    <ul>
+        <li ng-repeat="activiti in todo">
+            {{activiti.descripcion}} - {{activiti.fecha}}
+        </li>
+    </ul>
+</body>
+</html>
