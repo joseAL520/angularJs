@@ -1,4 +1,10 @@
 angular.module("CustomDirective",[])
+
+.directive("myAutoComplete",function(){
+
+    
+})
+
 .directive('backImg',function(){
 
     return function(scope,elemnt,attrs){
